@@ -13,8 +13,8 @@ services:
 
 install:
   - ps: docker-compose up -d
-  - sleep 10
-  - java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/mypostgre -jar .\aqa-shop.jar &
+  - sleep 15
+  - java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/mypostgre -jar ./artifacts/aqa-shop.jar &
 
 build_script:
   - sleep 10
