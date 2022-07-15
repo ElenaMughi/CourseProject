@@ -28,4 +28,25 @@ public class DashboardPage {
         boolean note5 = $$("[class='input__sub']").get(4).shouldBe(Condition.text("Неверный формат")).exists();
         return note1 & note2 & note3 & note4 & note5;
     }
+
+    public boolean isWrongFormat() {
+        boolean note1 = $$("[class='input__sub']").get(0).shouldBe(Condition.text("Неверный формат")).exists();
+        return note1;
+    }
+
+    public boolean isInvalidExpirationDate() {
+        boolean note1 = $$("[class='input__sub']").get(0).shouldBe(Condition.text("Неверно указан срок действия карты")).exists();
+        return note1;
+    }
+
+    public boolean isRequiredToFill() {
+        boolean note1 = $$("[class='input__sub']").get(0).shouldBe(Condition.text("Поле обязательно для заполнения")).exists();
+        return note1;
+    }
+
+    public boolean isWrongFormatNot() {
+        boolean note1 = $$("[class='input__sub']").get(0).exists();
+        return note1;
+    }
+
 }

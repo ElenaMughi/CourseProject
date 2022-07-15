@@ -9,6 +9,7 @@ import ru.netology.page.DashboardPage;
 import ru.netology.page.GoToPaymentForm;
 
 import static com.codeborne.selenide.Selenide.open;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SiteTests {
@@ -26,7 +27,7 @@ public class SiteTests {
     }
 
     @AfterAll
-    static void clearBase() {
+    static void forClose() {
         SelenideLogger.removeListener("allure");
     }
 
@@ -86,4 +87,193 @@ public class SiteTests {
         assertTrue(expected);
     }
 
+    @Test
+    @DisplayName("Проверка карт|Неверный формат")
+    void checkCardBadTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.cardsBad) {
+            var cardInfo = DataInfo.getUserCardInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isWrongFormat();
+            assertTrue(expected);
+        }
+    }
+
+    @Test
+    @DisplayName("Проверка карт|Допустимые значения")
+    void checkCardGoodTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.cardGood) {
+            var cardInfo = DataInfo.getUserCardInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isWrongFormatNot();
+            assertFalse(expected);
+        }
+    }
+
+    @Test
+    @DisplayName("Проверка месяца|Неверный формат")
+    void checkMonthBadTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.monthBad) {
+            var cardInfo = DataInfo.getUserMonthInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isWrongFormat();
+            assertTrue(expected);
+        }
+    }
+
+    @Test
+    @DisplayName("Проверка месяца|Неверно указан срок действия карты")
+    void checkInvalidExpirationDateTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.monthInvalidExpirationDate) {
+            var cardInfo = DataInfo.getUserMonthInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isInvalidExpirationDate();
+            assertTrue(expected);
+        }
+    }
+
+    @Test
+    @DisplayName("Проверка месяца|Допустимые значения")
+    void checkMonthGoodTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.monthGood) {
+            var cardInfo = DataInfo.getUserMonthInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isWrongFormatNot();
+            assertFalse(expected);
+        }
+    }
+
+    @Test
+    @DisplayName("Проверка года|Неверный формат")
+    void checkYearBadTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.yearBad) {
+            var cardInfo = DataInfo.getUserYearInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isWrongFormat();
+            assertTrue(expected);
+        }
+    }
+    @Test
+    @DisplayName("Проверка года|Допустимые значения")
+    void checkYearGoodTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.yearGood) {
+            var cardInfo = DataInfo.getUserYearInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isWrongFormatNot();
+            assertFalse(expected);
+        }
+    }
+
+    @Test
+    @DisplayName("Проверка месяца-года|Неверно указан срок действия карты")
+    void checkMonthAndYearBadTest() {
+        var paymentForm = new GoToPaymentForm();
+            var cardInfo = DataInfo.getUserMonthYearInfo(-1);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isInvalidExpirationDate();
+            assertTrue(expected);
+    }
+
+    @Test
+    @DisplayName("Проверка месяца-года|Текущий месяц-год")
+    void checkMonthAndYearNowTest() {
+        var paymentForm = new GoToPaymentForm();
+        var cardInfo = DataInfo.getUserMonthYearInfo(0);
+        var fillForm = paymentForm.goPaymentCashThenCredit();
+        dashboardPage = fillForm.goFillForm(cardInfo);
+        boolean expected = dashboardPage.isWrongFormatNot();
+        assertFalse(expected);
+    }
+
+    @Test
+    @DisplayName("Проверка FIO|Неверный формат")
+    void checkFIOBadTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.fIOBad) {
+            var cardInfo = DataInfo.getUserFIOInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isWrongFormat();
+            assertTrue(expected);
+        }
+    }
+
+    @Test
+    @DisplayName("Проверка FIO|Поле требует заполнения")
+    void checkFIORequiredToFillTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.fIORequiredToFill) {
+            var cardInfo = DataInfo.getUserFIOInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isRequiredToFill();
+            assertTrue(expected);
+        }
+    }
+
+    @Test
+    @DisplayName("Проверка FIO|Допустимые значения")
+    void checkFIOGoodTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.fIOGood) {
+            var cardInfo = DataInfo.getUserFIOInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isWrongFormatNot();
+            assertFalse(expected);
+        }
+    }
+
+    @Test
+    @DisplayName("Проверка CVC/CVV|Неверный формат")
+    void checkCVCBadTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.cVCBad) {
+            var cardInfo = DataInfo.getUserCVCInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isWrongFormat();
+            assertTrue(expected);
+        }
+    }
+
+    @Test
+    @DisplayName("Проверка CVC/CVV|Поле требует заполнения")
+    void checkCVCRequiredToFillTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.cVCRequiredToFill) {
+            var cardInfo = DataInfo.getUserCVCInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isRequiredToFill();
+            assertTrue(expected);
+        }
+    }
+
+    @Test
+    @DisplayName("Проверка CVC/CVV|Допустимые значения")
+    void checkCVCGoodTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.cVCGood) {
+            var cardInfo = DataInfo.getUserCVCInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isWrongFormatNot();
+            assertFalse(expected);
+        }
+    }
 }
