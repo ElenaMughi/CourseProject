@@ -14,9 +14,9 @@ services:
 install:
   - ps: docker-compose up -d
   - sleep 15
-  - java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/mypostgre -jar ./artifacts/aqa-shop.jar &
+  - java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/mypostgre -Dspring.datasource.password=pass -jar ./artifacts/aqa-shop.jar &
+  - sleep 10
 
 build_script:
-  - sleep 10
   - chmod +x gradlew
   - ./gradlew test -Dselenide.headless=true --info  # запускаем тест, флаг --info позволяет выводить больше информации
