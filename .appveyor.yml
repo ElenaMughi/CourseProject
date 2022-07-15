@@ -13,9 +13,9 @@ services:
 
 install:
   - ps: docker-compose up -d
-  - sleep 15
-  - java -jar ./artifacts/aqa-shop.jar &
-  - sleep 10
+  - sleep 20
+  - java -jar aqa-shop.jar &
+  - sleep 5
 
 build_script:
   - chmod +x gradlew
