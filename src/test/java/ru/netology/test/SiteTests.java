@@ -1,7 +1,7 @@
 package ru.netology.test;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-//import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import ru.netology.data.DataInfo;
@@ -17,7 +17,7 @@ public class SiteTests {
 
     @BeforeAll
     static void setUpAll() {
-//        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 

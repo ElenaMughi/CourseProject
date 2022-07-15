@@ -32,7 +32,7 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
     testImplementation 'io.qameta.allure:allure-selenide:2.16.1'
-//    testImplementation("io.github.bonigarcia:webdrivermanager:5.1.0")
+    testImplementation("io.github.bonigarcia:webdrivermanager:5.1.0")
 }
 
 test {
