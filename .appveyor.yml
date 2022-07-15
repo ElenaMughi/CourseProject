@@ -8,10 +8,15 @@ branches:
 
 build: off  # будем использовать свой скрипт сборки
 
+services:
+  - docker
+
 install:
-  # запускаем SUT (& означает, что в фоновом режиме - не блокируем терминал для запуска тестов)
-  - java -jar .\aqa-shop.jar &
+  - ps: docker-compose up -d
+  - sleep 10
+  - java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/mypostgre -jar .\aqa-shop.jar &
 
 build_script:
+  - sleep 10
   - chmod +x gradlew
   - ./gradlew test -Dselenide.headless=true --info  # запускаем тест, флаг --info позволяет выводить больше информации
