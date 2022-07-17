@@ -2,6 +2,7 @@ package ru.netology.page;
 
 import java.time.Duration;
 import com.codeborne.selenide.Condition;
+
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selectors.withText;
 
@@ -31,6 +32,11 @@ public class DashboardPage {
 
     public boolean isWrongFormat() {
         boolean note1 = $$("[class='input__sub']").get(0).shouldBe(Condition.text("Неверный формат")).exists();
+        return note1;
+    }
+
+    public boolean isOldYear() {
+        boolean note1 = $$("[class='input__sub']").get(0).shouldBe(Condition.text("Истёк срок действия карты")).exists();
         return note1;
     }
 

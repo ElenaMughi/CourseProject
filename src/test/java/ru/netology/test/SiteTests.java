@@ -3,10 +3,13 @@ package ru.netology.test;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
+import lombok.SneakyThrows;
 import org.junit.jupiter.api.*;
 import ru.netology.data.DataInfo;
 import ru.netology.page.DashboardPage;
 import ru.netology.page.GoToPaymentForm;
+
+import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -164,6 +167,20 @@ public class SiteTests {
             assertTrue(expected);
         }
     }
+
+    @Test
+    @DisplayName("Проверка года|Истек срок действия")
+    void checkYearOldTest() {
+        var paymentForm = new GoToPaymentForm();
+        for (String str : DataInfo.yearOld) {
+            var cardInfo = DataInfo.getUserYearInfo(str);
+            var fillForm = paymentForm.goPaymentCashThenCredit();
+            dashboardPage = fillForm.goFillForm(cardInfo);
+            boolean expected = dashboardPage.isOldYear();
+            assertTrue(expected);
+        }
+    }
+
     @Test
     @DisplayName("Проверка года|Допустимые значения")
     void checkYearGoodTest() {
@@ -173,7 +190,7 @@ public class SiteTests {
             var fillForm = paymentForm.goPaymentCashThenCredit();
             dashboardPage = fillForm.goFillForm(cardInfo);
             boolean expected = dashboardPage.isWrongFormatNot();
-            assertFalse(expected);
+            assertTrue(expected);
         }
     }
 
@@ -181,11 +198,11 @@ public class SiteTests {
     @DisplayName("Проверка месяца-года|Неверно указан срок действия карты")
     void checkMonthAndYearBadTest() {
         var paymentForm = new GoToPaymentForm();
-            var cardInfo = DataInfo.getUserMonthYearInfo(-1);
-            var fillForm = paymentForm.goPaymentCashThenCredit();
-            dashboardPage = fillForm.goFillForm(cardInfo);
-            boolean expected = dashboardPage.isInvalidExpirationDate();
-            assertTrue(expected);
+        var cardInfo = DataInfo.getUserMonthYearInfo(-1);
+        var fillForm = paymentForm.goPaymentCashThenCredit();
+        dashboardPage = fillForm.goFillForm(cardInfo);
+        boolean expected = dashboardPage.isInvalidExpirationDate();
+        assertTrue(expected);
     }
 
     @Test
@@ -275,5 +292,47 @@ public class SiteTests {
             boolean expected = dashboardPage.isWrongFormatNot();
             assertFalse(expected);
         }
+    }
+
+    @SneakyThrows
+    @Test
+    @DisplayName("Сохранение записи транзакции с APPROVED CARD")
+    void saveSQLCardGoodTest() {
+        var cardInfo = DataInfo.getCardInfo();
+        var paymentForm = new GoToPaymentForm();
+        var fillForm = paymentForm.goPaymentCredit();
+        int[] count = DataInfo.countLastTransaction();
+        dashboardPage = fillForm.goFillForm(cardInfo);
+        TimeUnit.SECONDS.sleep(15);
+        boolean expected = DataInfo.isPaymentSave(count, cardInfo.getCardSuccess());
+        assertTrue(expected);
+    }
+
+    @SneakyThrows
+    @Test
+    @DisplayName("Сохранение записи транзакции с DECLINED CARD")
+    void saveSQLCardBadTest() {
+        var cardInfo = DataInfo.getBadCardInfo();
+        var paymentForm = new GoToPaymentForm();
+        var fillForm = paymentForm.goPaymentCredit();
+        int[] count = DataInfo.countLastTransaction();
+        dashboardPage = fillForm.goFillForm(cardInfo);
+        TimeUnit.SECONDS.sleep(15);
+        boolean expected = DataInfo.isPaymentSave(count, cardInfo.getCardSuccess());
+        assertTrue(expected);
+    }
+
+    @SneakyThrows
+    @Test
+    @DisplayName("Сохранение записи транзакции с RANDOM CARD")
+    void saveSQLCardRandomTest() {
+        var cardInfo = DataInfo.getRandomCardInfo();
+        var paymentForm = new GoToPaymentForm();
+        var fillForm = paymentForm.goPaymentCredit();
+        int[] count = DataInfo.countLastTransaction();
+        dashboardPage = fillForm.goFillForm(cardInfo);
+        TimeUnit.SECONDS.sleep(15);
+        boolean expected = DataInfo.isPaymentSave(count, cardInfo.getCardSuccess());
+        assertTrue(expected);
     }
 }

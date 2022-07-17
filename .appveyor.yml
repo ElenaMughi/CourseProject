@@ -14,9 +14,9 @@ services:
 install:
   - docker-compose up -d
   - sleep 20
-  - java -jar ./artifacts/aqa-shop.jar &
-  - sleep 5
+  - java -jar .\aqa-shop.jar &
+  - sleep 10
 
 build_script:
   - chmod +x gradlew
-  - ./gradlew test -Dselenide.headless=true --info  # запускаем тест, флаг --info позволяет выводить больше информации
+  - ./gradlew test --info -Dselenide.headless=true   # запускаем тест, флаг --info позволяет выводить больше информации

@@ -2,7 +2,6 @@ Thumbs.db*
 .DS_Store
 HELP.md
 .gradle
-build/
 
 ### STS ###
 .apt_generated
@@ -43,3 +42,5 @@ out/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
+!/build/**
+!aqa-shop.jar
