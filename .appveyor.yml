@@ -14,7 +14,7 @@ services:
 install:
   - docker-compose up -d
   - sleep 20
-  - java -jar .\aqa-shop.jar &
+  - java -jar aqa-shop.jar &
   - sleep 10
 
 build_script:
