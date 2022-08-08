@@ -7,8 +7,8 @@
 Для запуска Allure необходимо запустить в терминале: ./gradlew allureServe
 
 ## Скриншоты отчета Allure
-![скриншот](https://i.gyazo.com/43fe46d746f14a41c4ac7ff8117cdc8a.png)
-![скриншот](https://i.gyazo.com/2d5d831398634b8f27eaaf4bd7d71def.png)
+![скриншот](https://github.com/ElenaMughi/CourseProject/blob/master/pick1.PNG)
+![скриншот](https://github.com/ElenaMughi/CourseProject/blob/master/pick2.PNG)
 
 
 Все найденные баги зарегистрированы в Issues к данному проекту (список багов ниже)
