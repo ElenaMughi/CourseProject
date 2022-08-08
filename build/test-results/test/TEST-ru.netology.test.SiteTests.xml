@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.netology.test.SiteTests" tests="24" skipped="0" failures="7" errors="0" timestamp="2022-07-17T20:50:37" hostname="DESKTOP-SKMKPGB" time="188.079">
+<testsuite name="ru.netology.test.SiteTests" tests="24" skipped="0" failures="7" errors="0" timestamp="2022-08-08T08:05:35" hostname="DESKTOP-SKMKPGB" time="192.541">
   <properties/>
-  <testcase name="Сохранение записи транзакции с RANDOM CARD" classname="ru.netology.test.SiteTests" time="30.359">
+  <testcase name="Сохранение записи транзакции с RANDOM CARD" classname="ru.netology.test.SiteTests" time="25.834">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:35)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:179)
-	at ru.netology.test.SiteTests.saveSQLCardRandomTest(SiteTests.java:336)
+	at ru.netology.test.SiteTests.saveSQLCardRandomTest(SiteTests.java:337)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -106,15 +106,15 @@
 	at java.base/java.lang.Thread.run(Thread.java:834)
 </failure>
   </testcase>
-  <testcase name="Проверка месяца-года|Неверно указан срок действия карты" classname="ru.netology.test.SiteTests" time="1.93"/>
-  <testcase name="Отправка формы с APPROVED CARD" classname="ru.netology.test.SiteTests" time="3.522"/>
-  <testcase name="Проверка двойной отправки с APPROVED CARD" classname="ru.netology.test.SiteTests" time="10.889"/>
-  <testcase name="Проверка CVC/CVV|Допустимые значения" classname="ru.netology.test.SiteTests" time="1.6"/>
-  <testcase name="Проверка месяца|Неверно указан срок действия карты" classname="ru.netology.test.SiteTests" time="9.232">
-    <failure message="Element not found {[class='input__sub'][0]}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091094500.0.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091094500.0.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {[class='input__sub'][0]}
+  <testcase name="Проверка месяца-года|Неверно указан срок действия карты" classname="ru.netology.test.SiteTests" time="2.242"/>
+  <testcase name="Отправка формы с APPROVED CARD" classname="ru.netology.test.SiteTests" time="11.518"/>
+  <testcase name="Проверка двойной отправки с APPROVED CARD" classname="ru.netology.test.SiteTests" time="8.313"/>
+  <testcase name="Проверка CVC/CVV|Допустимые значения" classname="ru.netology.test.SiteTests" time="1.549"/>
+  <testcase name="Проверка месяца|Неверно указан срок действия карты" classname="ru.netology.test.SiteTests" time="8.688">
+    <failure message="Element not found {[class='input__sub'][0]}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659945993242.0.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659945993242.0.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {[class='input__sub'][0]}
 Expected: visible
-Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091094500.0.png
-Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091094500.0.html
+Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659945993242.0.png
+Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659945993242.0.html
 Timeout: 4 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}
 	at com.codeborne.selenide.impl.CollectionElement.createElementNotFoundError(CollectionElement.java:61)
@@ -126,7 +126,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at com.sun.proxy.$Proxy19.shouldBe(Unknown Source)
 	at ru.netology.page.DashboardPage.isInvalidExpirationDate(DashboardPage.java:44)
-	at ru.netology.test.SiteTests.checkInvalidExpirationDateTest(SiteTests.java:140)
+	at ru.netology.test.SiteTests.checkInvalidExpirationDateTest(SiteTests.java:141)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -224,15 +224,15 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}
-  (Session info: chrome=103.0.5060.114)
+  (Session info: chrome=103.0.5060.134)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
 System info: host: 'DESKTOP-SKMKPGB', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e11cdbf57c8e84ec9f8e02b2cb542de5, findElement {using=css selector, value=[class='input__sub']}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\1288~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64501}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64501/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e11cdbf57c8e84ec9f8e02b2cb542de5
-	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+Command: [a904191eb3d64e7e27c82b941c0bcadb, findElement {using=css selector, value=[class='input__sub']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\1288~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63091}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63091/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a904191eb3d64e7e27c82b941c0bcadb
+	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
@@ -255,14 +255,14 @@ Session ID: e11cdbf57c8e84ec9f8e02b2cb542de5
 	... 104 more
 </failure>
   </testcase>
-  <testcase name="Сохранение записи транзакции с DECLINED CARD" classname="ru.netology.test.SiteTests" time="16.79"/>
-  <testcase name="Проверка карт|Неверный формат" classname="ru.netology.test.SiteTests" time="5.6"/>
-  <testcase name="Отправка формы с RANDOM CARD" classname="ru.netology.test.SiteTests" time="17.06">
-    <failure message="Element should be visible {with text: Ошибка! Банк отказал в проведении операции.}&#13;&#10;Element: '&lt;div class=&quot;notification__content&quot; displayed:false&gt;&lt;/div&gt;'&#13;&#10;Actual value: hidden&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091134174.1.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091134174.1.html&#13;&#10;Timeout: 15 s." type="com.codeborne.selenide.ex.ElementShould">Element should be visible {with text: Ошибка! Банк отказал в проведении операции.}
-Element: '&lt;div class=&quot;notification__content&quot; displayed:false&gt;&lt;/div&gt;'
-Actual value: hidden
-Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091134174.1.png
-Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091134174.1.html
+  <testcase name="Сохранение записи транзакции с DECLINED CARD" classname="ru.netology.test.SiteTests" time="16.921"/>
+  <testcase name="Проверка карт|Неверный формат" classname="ru.netology.test.SiteTests" time="5.445"/>
+  <testcase name="Отправка формы с RANDOM CARD" classname="ru.netology.test.SiteTests" time="24.668">
+    <failure message="Element should be hidden {with text: Операция одобрена Банком.}&#13;&#10;Element: '&lt;div class=&quot;notification__content&quot;&gt;Операция одобрена Банком.&lt;/div&gt;'&#13;&#10;Actual value: visible&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946040477.1.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946040477.1.html&#13;&#10;Timeout: 15 s." type="com.codeborne.selenide.ex.ElementShould">Element should be hidden {with text: Операция одобрена Банком.}
+Element: '&lt;div class=&quot;notification__content&quot;&gt;Операция одобрена Банком.&lt;/div&gt;'
+Actual value: visible
+Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946040477.1.png
+Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946040477.1.html
 Timeout: 15 s.
 	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:127)
 	at com.codeborne.selenide.commands.Should.execute(Should.java:30)
@@ -271,8 +271,8 @@ Timeout: 15 s.
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at com.sun.proxy.$Proxy19.shouldBe(Unknown Source)
-	at ru.netology.page.DashboardPage.isNotSuccess(DashboardPage.java:19)
-	at ru.netology.test.SiteTests.cardRandomTest(SiteTests.java:79)
+	at ru.netology.page.DashboardPage.isNotSuccess(DashboardPage.java:20)
+	at ru.netology.test.SiteTests.cardRandomTest(SiteTests.java:80)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -371,17 +371,17 @@ Timeout: 15 s.
 	at java.base/java.lang.Thread.run(Thread.java:834)
 </failure>
   </testcase>
-  <testcase name="Проверка года|Допустимые значения" classname="ru.netology.test.SiteTests" time="1.742"/>
-  <testcase name="Проверка месяца|Неверный формат" classname="ru.netology.test.SiteTests" time="7.088"/>
-  <testcase name="Проверка FIO|Допустимые значения" classname="ru.netology.test.SiteTests" time="3.282"/>
-  <testcase name="Проверка года|Истек срок действия" classname="ru.netology.test.SiteTests" time="1.677"/>
-  <testcase name="Проверка карт|Допустимые значения" classname="ru.netology.test.SiteTests" time="2.911"/>
-  <testcase name="Отправка формы с DECLINED CARD" classname="ru.netology.test.SiteTests" time="17.181">
-    <failure message="Element should be visible {with text: Ошибка! Банк отказал в проведении операции.}&#13;&#10;Element: '&lt;div class=&quot;notification__content&quot; displayed:false&gt;&lt;/div&gt;'&#13;&#10;Actual value: hidden&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091168089.2.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091168089.2.html&#13;&#10;Timeout: 15 s." type="com.codeborne.selenide.ex.ElementShould">Element should be visible {with text: Ошибка! Банк отказал в проведении операции.}
+  <testcase name="Проверка года|Допустимые значения" classname="ru.netology.test.SiteTests" time="1.629"/>
+  <testcase name="Проверка месяца|Неверный формат" classname="ru.netology.test.SiteTests" time="6.488"/>
+  <testcase name="Проверка FIO|Допустимые значения" classname="ru.netology.test.SiteTests" time="2.789"/>
+  <testcase name="Проверка года|Истек срок действия" classname="ru.netology.test.SiteTests" time="1.547"/>
+  <testcase name="Проверка карт|Допустимые значения" classname="ru.netology.test.SiteTests" time="2.678"/>
+  <testcase name="Отправка формы с DECLINED CARD" classname="ru.netology.test.SiteTests" time="16.938">
+    <failure message="Element should be visible {with text: Ошибка! Банк отказал в проведении операции.}&#13;&#10;Element: '&lt;div class=&quot;notification__content&quot; displayed:false&gt;&lt;/div&gt;'&#13;&#10;Actual value: hidden&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946072560.2.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946072560.2.html&#13;&#10;Timeout: 15 s." type="com.codeborne.selenide.ex.ElementShould">Element should be visible {with text: Ошибка! Банк отказал в проведении операции.}
 Element: '&lt;div class=&quot;notification__content&quot; displayed:false&gt;&lt;/div&gt;'
 Actual value: hidden
-Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091168089.2.png
-Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091168089.2.html
+Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946072560.2.png
+Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946072560.2.html
 Timeout: 15 s.
 	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:127)
 	at com.codeborne.selenide.commands.Should.execute(Should.java:30)
@@ -391,7 +391,7 @@ Timeout: 15 s.
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at com.sun.proxy.$Proxy19.shouldBe(Unknown Source)
 	at ru.netology.page.DashboardPage.isNotSuccess(DashboardPage.java:19)
-	at ru.netology.test.SiteTests.cardBadTest(SiteTests.java:68)
+	at ru.netology.test.SiteTests.cardBadTest(SiteTests.java:69)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -490,11 +490,11 @@ Timeout: 15 s.
 	at java.base/java.lang.Thread.run(Thread.java:834)
 </failure>
   </testcase>
-  <testcase name="Проверка CVC/CVV|Неверный формат" classname="ru.netology.test.SiteTests" time="10.5">
-    <failure message="Element not found {[class='input__sub'][0]}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091178491.3.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091178491.3.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {[class='input__sub'][0]}
+  <testcase name="Проверка CVC/CVV|Неверный формат" classname="ru.netology.test.SiteTests" time="10.033">
+    <failure message="Element not found {[class='input__sub'][0]}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946082582.3.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946082582.3.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {[class='input__sub'][0]}
 Expected: visible
-Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091178491.3.png
-Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091178491.3.html
+Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946082582.3.png
+Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946082582.3.html
 Timeout: 4 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}
 	at com.codeborne.selenide.impl.CollectionElement.createElementNotFoundError(CollectionElement.java:61)
@@ -506,7 +506,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at com.sun.proxy.$Proxy19.shouldBe(Unknown Source)
 	at ru.netology.page.DashboardPage.isWrongFormat(DashboardPage.java:34)
-	at ru.netology.test.SiteTests.checkCVCBadTest(SiteTests.java:266)
+	at ru.netology.test.SiteTests.checkCVCBadTest(SiteTests.java:267)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -604,15 +604,15 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}
-  (Session info: chrome=103.0.5060.114)
+  (Session info: chrome=103.0.5060.134)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
 System info: host: 'DESKTOP-SKMKPGB', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e11cdbf57c8e84ec9f8e02b2cb542de5, findElement {using=css selector, value=[class='input__sub']}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\1288~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64501}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64501/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e11cdbf57c8e84ec9f8e02b2cb542de5
-	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+Command: [a904191eb3d64e7e27c82b941c0bcadb, findElement {using=css selector, value=[class='input__sub']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\1288~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63091}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63091/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a904191eb3d64e7e27c82b941c0bcadb
+	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
@@ -635,15 +635,15 @@ Session ID: e11cdbf57c8e84ec9f8e02b2cb542de5
 	... 104 more
 </failure>
   </testcase>
-  <testcase name="Сохранение записи транзакции с APPROVED CARD" classname="ru.netology.test.SiteTests" time="16.911"/>
-  <testcase name="Проверка месяца-года|Текущий месяц-год" classname="ru.netology.test.SiteTests" time="1.571"/>
-  <testcase name="Проверка года|Неверный формат" classname="ru.netology.test.SiteTests" time="6.847"/>
-  <testcase name="Отправка пустой формы" classname="ru.netology.test.SiteTests" time="0.77"/>
-  <testcase name="Проверка FIO|Неверный формат" classname="ru.netology.test.SiteTests" time="6.162">
-    <failure message="Element not found {[class='input__sub'][0]}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091210773.4.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091210773.4.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {[class='input__sub'][0]}
+  <testcase name="Сохранение записи транзакции с APPROVED CARD" classname="ru.netology.test.SiteTests" time="16.852"/>
+  <testcase name="Проверка месяца-года|Текущий месяц-год" classname="ru.netology.test.SiteTests" time="1.544"/>
+  <testcase name="Проверка года|Неверный формат" classname="ru.netology.test.SiteTests" time="7.009"/>
+  <testcase name="Отправка пустой формы" classname="ru.netology.test.SiteTests" time="0.789"/>
+  <testcase name="Проверка FIO|Неверный формат" classname="ru.netology.test.SiteTests" time="6.033">
+    <failure message="Element not found {[class='input__sub'][0]}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946114734.4.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946114734.4.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {[class='input__sub'][0]}
 Expected: visible
-Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091210773.4.png
-Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091210773.4.html
+Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946114734.4.png
+Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946114734.4.html
 Timeout: 4 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}
 	at com.codeborne.selenide.impl.CollectionElement.createElementNotFoundError(CollectionElement.java:61)
@@ -655,7 +655,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at com.sun.proxy.$Proxy19.shouldBe(Unknown Source)
 	at ru.netology.page.DashboardPage.isWrongFormat(DashboardPage.java:34)
-	at ru.netology.test.SiteTests.checkFIOBadTest(SiteTests.java:227)
+	at ru.netology.test.SiteTests.checkFIOBadTest(SiteTests.java:228)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -753,15 +753,15 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}
-  (Session info: chrome=103.0.5060.114)
+  (Session info: chrome=103.0.5060.134)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
 System info: host: 'DESKTOP-SKMKPGB', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e11cdbf57c8e84ec9f8e02b2cb542de5, findElement {using=css selector, value=[class='input__sub']}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\1288~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64501}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64501/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e11cdbf57c8e84ec9f8e02b2cb542de5
-	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+Command: [a904191eb3d64e7e27c82b941c0bcadb, findElement {using=css selector, value=[class='input__sub']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\1288~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63091}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63091/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a904191eb3d64e7e27c82b941c0bcadb
+	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
@@ -784,13 +784,13 @@ Session ID: e11cdbf57c8e84ec9f8e02b2cb542de5
 	... 104 more
 </failure>
   </testcase>
-  <testcase name="Проверка месяца|Допустимые значения" classname="ru.netology.test.SiteTests" time="1.635"/>
-  <testcase name="Проверка CVC/CVV|Поле требует заполнения" classname="ru.netology.test.SiteTests" time="6.145"/>
-  <testcase name="Проверка FIO|Поле требует заполнения" classname="ru.netology.test.SiteTests" time="6.514">
-    <failure message="Element not found {[class='input__sub'][0]}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091225206.5.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091225206.5.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {[class='input__sub'][0]}
+  <testcase name="Проверка месяца|Допустимые значения" classname="ru.netology.test.SiteTests" time="1.578"/>
+  <testcase name="Проверка CVC/CVV|Поле требует заполнения" classname="ru.netology.test.SiteTests" time="5.126"/>
+  <testcase name="Проверка FIO|Поле требует заполнения" classname="ru.netology.test.SiteTests" time="6.218">
+    <failure message="Element not found {[class='input__sub'][0]}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946127646.5.png&#13;&#10;Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946127646.5.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {[class='input__sub'][0]}
 Expected: visible
-Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091225206.5.png
-Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1658091225206.5.html
+Screenshot: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946127646.5.png
+Page source: file:/C:/IdeaGradle/CourseProject/build/reports/tests/1659946127646.5.html
 Timeout: 4 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}
 	at com.codeborne.selenide.impl.CollectionElement.createElementNotFoundError(CollectionElement.java:61)
@@ -802,7 +802,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at com.sun.proxy.$Proxy19.shouldBe(Unknown Source)
 	at ru.netology.page.DashboardPage.isRequiredToFill(DashboardPage.java:49)
-	at ru.netology.test.SiteTests.checkFIORequiredToFillTest(SiteTests.java:240)
+	at ru.netology.test.SiteTests.checkFIORequiredToFillTest(SiteTests.java:241)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -900,15 +900,15 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='input__sub']&quot;}
-  (Session info: chrome=103.0.5060.114)
+  (Session info: chrome=103.0.5060.134)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
 System info: host: 'DESKTOP-SKMKPGB', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e11cdbf57c8e84ec9f8e02b2cb542de5, findElement {using=css selector, value=[class='input__sub']}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\1288~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64501}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64501/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e11cdbf57c8e84ec9f8e02b2cb542de5
-	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+Command: [a904191eb3d64e7e27c82b941c0bcadb, findElement {using=css selector, value=[class='input__sub']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\1288~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63091}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63091/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a904191eb3d64e7e27c82b941c0bcadb
+	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
@@ -932,17 +932,17 @@ Session ID: e11cdbf57c8e84ec9f8e02b2cb542de5
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}) on port 64833
+  <system-err><![CDATA[Starting ChromeDriver 103.0.5060.134 (8ec6fce403b3feb0869b0732eda8bd95011d333c-refs/branch-heads/5060@{#1262}) on port 49777
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-июл. 17, 2022 11:50:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+авг. 08, 2022 11:05:42 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-июл. 17, 2022 11:50:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+авг. 08, 2022 11:05:42 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 103, so returning the closest version found: a no-op implementation
-июл. 17, 2022 11:50:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+авг. 08, 2022 11:05:42 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Unable to find CDP implementation matching 103.
-июл. 17, 2022 11:50:48 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+авг. 08, 2022 11:05:42 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
 WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

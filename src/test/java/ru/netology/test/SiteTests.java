@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.*;
+import ru.netology.data.DBHelper;
 import ru.netology.data.DataInfo;
 import ru.netology.page.DashboardPage;
 import ru.netology.page.GoToPaymentForm;
@@ -26,7 +27,7 @@ public class SiteTests {
 
     @BeforeEach
     void openSite() {
-        open("http://localhost:8080");
+        open(System.getProperty("siteUrl"));
     }
 
     @AfterAll
@@ -47,7 +48,7 @@ public class SiteTests {
 
     @Test
     @DisplayName("Проверка двойной отправки с APPROVED CARD")
-    void cardGoodTestх2() {
+    void cardGoodTestX2() {
         var cardInfo = DataInfo.getCardInfo();
         var paymentForm = new GoToPaymentForm();
         var fillForm = paymentForm.goPaymentCredit();
@@ -301,10 +302,10 @@ public class SiteTests {
         var cardInfo = DataInfo.getCardInfo();
         var paymentForm = new GoToPaymentForm();
         var fillForm = paymentForm.goPaymentCredit();
-        int[] count = DataInfo.countLastTransaction();
+        int[] count = DBHelper.countLastTransaction();
         dashboardPage = fillForm.goFillForm(cardInfo);
         TimeUnit.SECONDS.sleep(15);
-        boolean expected = DataInfo.isPaymentSave(count, cardInfo.getCardSuccess());
+        boolean expected = DBHelper.isPaymentSave(count, cardInfo.getCardSuccess());
         assertTrue(expected);
     }
 
@@ -315,10 +316,10 @@ public class SiteTests {
         var cardInfo = DataInfo.getBadCardInfo();
         var paymentForm = new GoToPaymentForm();
         var fillForm = paymentForm.goPaymentCredit();
-        int[] count = DataInfo.countLastTransaction();
+        int[] count = DBHelper.countLastTransaction();
         dashboardPage = fillForm.goFillForm(cardInfo);
         TimeUnit.SECONDS.sleep(15);
-        boolean expected = DataInfo.isPaymentSave(count, cardInfo.getCardSuccess());
+        boolean expected = DBHelper.isPaymentSave(count, cardInfo.getCardSuccess());
         assertTrue(expected);
     }
 
@@ -329,10 +330,10 @@ public class SiteTests {
         var cardInfo = DataInfo.getRandomCardInfo();
         var paymentForm = new GoToPaymentForm();
         var fillForm = paymentForm.goPaymentCredit();
-        int[] count = DataInfo.countLastTransaction();
+        int[] count = DBHelper.countLastTransaction();
         dashboardPage = fillForm.goFillForm(cardInfo);
         TimeUnit.SECONDS.sleep(15);
-        boolean expected = DataInfo.isPaymentSave(count, cardInfo.getCardSuccess());
+        boolean expected = DBHelper.isPaymentSave(count, cardInfo.getCardSuccess());
         assertTrue(expected);
     }
 }

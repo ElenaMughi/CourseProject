@@ -35,8 +35,8 @@ dependencies {
     testImplementation("io.github.bonigarcia:webdrivermanager:5.1.0")
 }
 
-
 test {
     useJUnitPlatform()
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    systemProperty "siteUrl", System.getProperty("http://localhost:8080")
 }
